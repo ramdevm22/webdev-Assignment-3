@@ -1,0 +1,65 @@
+
+.login-content{
+    height: 340px;
+    width: 600px;
+    margin: 0px 300px 50px 300px;
+    padding-top: 20px;
+    background-color: rgb(13, 11, 16);
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgb(143, 137, 137);
+}
+.login-content h2{
+    color: white;
+    background-color: rgb(13, 11, 16);
+    padding: 5px 10px 15px  140px;
+   
+}
+.login-content p{
+    color: white;
+     background-color: rgb(13, 11, 16);
+    height: 18px;
+    width: 180px;
+    margin: 10px 0px 2px 10px;
+    float: left;
+}
+.login-content img{
+    float: right;
+    height: 280px;
+    width: 280px;
+    margin-right: 20px;
+    border-radius: 10px;
+
+}
+.login-content input{
+    height: 40px;
+    width: 240px;
+    padding-left: 6px;
+    border-radius: 6px;
+    border: none;
+}
+.login-content .input{
+      background-color: rgb(13, 11, 16);
+     margin: 10px;
+
+}
+.login-content button{
+    color: white;
+    height: 40px;
+    width: 240px;
+    margin: 10px;
+    background-color: rgb(158, 68, 140);
+    border-radius: 6px;
+    border: none;
+}
+.login-content .button{
+     background-color: rgb(13, 11, 16);
+   margin: 5px;
+}
+.login-content .new-customer{
+     background-color: rgb(13, 11, 16);
+    color: white;
+    margin: 10px;
+}
+.login-content .register-link{
+     background-color: rgb(13, 11, 16);
+}
