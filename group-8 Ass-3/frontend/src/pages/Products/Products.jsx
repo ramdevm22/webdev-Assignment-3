@@ -7,12 +7,12 @@ const products = [
     name: "macbook",
     rating: "⭐⭐⭐⭐⭐",
     brand: "Apple",
-    price: "400",
+    price: "2000",
   },
   {
     id: 2,
     path: "./images/dslr.jpg",
-    name: "dslr",
+    name: "Dslr",
     rating: "⭐⭐⭐⭐⭐",
     brand: "Canon",
     price: "120",
@@ -39,7 +39,7 @@ const products = [
     name: "Samsung galaxy",
     rating: "⭐⭐⭐⭐⭐",
     brand: "Samsung",
-    price: "130",
+    price: "800",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const products = [
     name: "Samsung galaxy",
     rating: "⭐⭐⭐⭐⭐",
     brand: "Samsung",
-    price: "199",
+    price: "850",
   },
   {
     id: 7,

@@ -25,7 +25,7 @@ const Shop = ({ products, addToCart, addToFavourites }) => {
         <button>Samsung</button>
         <button>Puma</button>
         <h3>Filter by price</h3>
-        <input type="text" placeholder="Enter Price" />
+        <input type="number" placeholder="Enter Price" />
         <button className="Reset-Filter">Reset Filter</button>
       </div>
       <div className="home right-content">

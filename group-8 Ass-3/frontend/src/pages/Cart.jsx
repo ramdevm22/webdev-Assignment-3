@@ -2,10 +2,15 @@ import React from "react";
 import "./Cart.css";
 
 const Cart = ({ cart, removeFromCart }) => {
-  let totalPrice = 0;
-  cart.forEach((item) => {
-    totalPrice += item.price;
-  });
+  //   let totalPrice = 0;
+  //   cart.forEach((item) => {
+  //     totalPrice += item.price;
+  //   });
+
+  const totalPrice = cart.reduce(
+    (total, item) => parseInt(total) + parseInt(item.price),
+    0
+  );
 
   return (
     <div className="cart">

@@ -14,52 +14,71 @@
     padding: 5px 10px 15px  140px;
    
 }
-.login-content p{
+.login-content form{
+    width: 280px;
+    height: 280px;
+    margin-left: 8px;
+    border-radius: 6px;
+}
+.login-content form p{
     color: white;
-     background-color: rgb(13, 11, 16);
+    background-color: rgb(30, 30, 42);
     height: 18px;
     width: 180px;
-    margin: 10px 0px 2px 10px;
+    margin: 30px 0px 2px 18px;
     float: left;
 }
 .login-content img{
     float: right;
-    height: 280px;
+    height: 260px;
     width: 280px;
-    margin-right: 20px;
+    margin: 10px 16px 10px 10px;
     border-radius: 10px;
-
+}
+.login-content img:hover{
+      height: 280px;
+      margin: 4px 16px 16px 10px;
 }
 .login-content input{
     height: 40px;
     width: 240px;
-    padding-left: 6px;
+    margin-left: 18px;
     border-radius: 6px;
-    border: none;
+    border: 1px solid white;
+    color: white;
 }
 .login-content .input{
       background-color: rgb(13, 11, 16);
      margin: 10px;
 
 }
+.login-content input::placeholder {
+    color: #999;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hide placeholder when input is focused and not empty */
+  input:focus::placeholder {
+    opacity: 0;
+  }
 .login-content button{
     color: white;
     height: 40px;
     width: 240px;
-    margin: 10px;
+    margin: 12px 5px 4px 20px;
     background-color: rgb(158, 68, 140);
     border-radius: 6px;
     border: none;
+    cursor: pointer;
 }
-.login-content .button{
-     background-color: rgb(13, 11, 16);
-   margin: 5px;
-}
+
 .login-content .new-customer{
-     background-color: rgb(13, 11, 16);
+    background-color: rgb(30, 30, 42);
     color: white;
     margin: 10px;
 }
-.login-content .register-link{
-     background-color: rgb(13, 11, 16);
+.login-content .register-link, .register-content .login-link{
+   color: rgb(125, 108, 108);
+   margin-left: 6px;
+   text-decoration: none;
 }
