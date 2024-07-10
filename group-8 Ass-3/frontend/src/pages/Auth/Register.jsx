@@ -1,27 +1,29 @@
 import React, { useState } from "react";
+import MuiAlert from "@material-ui/lab/Alert";
 import axios from "axios";
 import Header from "../../components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const navigate = useNavigate;
 
-  const handleSubmit = async (e) => {
+  function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
-        username,
-        email,
-        password,
-      });
-      localStorage.setItem("token", res.data.token);
-      setMessage("Registration successful");
-    } catch (err) {
-      setMessage(err.response.data.message);
-    }
+    axios
+      .post("http://localhost:3001/register", { username, email, password })
+      .then((result) => {
+        console.log(result);
+        navigate("./Login");
+        <Alert severity="success">Sample Success Message</Alert>;
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -60,7 +62,6 @@ const Register = () => {
             </Link>
           </div>
         </form>
-        {message && <p>{message}</p>}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FiHeart } from "react-icons/fi";

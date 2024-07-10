@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Header from "../../components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+    axios
+      .post("http://localhost:3001/login", {
         email,
         password,
+      })
+      .then((result) => {
+        console.log(result);
+        if (result.data === "Success") {
+          navigate("/");
+        }
       });
-      localStorage.setItem("token", res.data.token);
-      setMessage("Login successful");
-    } catch (err) {
-      setMessage(err.response.data.message);
-    }
   };
 
   return (
@@ -51,7 +52,6 @@ const Login = () => {
             </Link>
           </div>
         </form>
-        {message && <p>{message}</p>}
       </div>
     </>
   );
