@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MuiAlert from "@material-ui/lab/Alert";
 import axios from "axios";
 import Header from "../../components/Header";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,10 +9,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate;
 
-  function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -21,7 +16,6 @@ const Register = () => {
       .then((result) => {
         console.log(result);
         navigate("./Login");
-        <Alert severity="success">Sample Success Message</Alert>;
       })
       .catch((err) => console.log(err));
   };
